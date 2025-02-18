@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 @Service
-public class ServiceUser {
+public class ServiceRequest {
 
     @Autowired
     private RepositoryUser repositoryUser;
@@ -17,15 +17,15 @@ public class ServiceUser {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    public boolean CheckAuthenticate (String email,String password){
-        Optional<User> optionalUser = repositoryUser.findByEmail(email);
+   public boolean chechAuthenticate (String email,String password){
+       Optional<User> optionalUser = repositoryUser.findByEmail(email);
 
-        if(optionalUser.isPresent()){
+       if(optionalUser.isPresent()){
             User user = optionalUser.get();
-                if(passwordEncoder.matches(password,user.getPassword()){
+                if(passwordEncoder.matches(password,user.getPassword())){
                     return true;
-            }
-            return false;
-        }
-    }
+                }
+       }
+       return false;
+   }
 }
