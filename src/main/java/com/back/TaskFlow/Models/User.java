@@ -3,10 +3,7 @@ package com.back.TaskFlow.Models;
 
 import com.back.TaskFlow.enumm.Role;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 
 import java.util.Set;
