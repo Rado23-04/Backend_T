@@ -15,7 +15,7 @@ public class ConfigCors {
                 registry.addMapping("/**")
                         .allowCredentials(true)
                         .allowedMethods("GET","POST","DELETE","PUT")
-                        .allowedOrigins("*")
+                        .allowedOrigins("http://localhost:5173")
                         .allowedHeaders("*");
             }
         };
