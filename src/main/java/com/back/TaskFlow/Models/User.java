@@ -6,6 +6,8 @@ import jakarta.persistence.*;
 import lombok.*;
 
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -33,4 +35,7 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "permission_id")
     )
     private Set<Permissions> permissionsSet;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Task> tasks = new ArrayList<>();
 }
