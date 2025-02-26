@@ -8,5 +8,5 @@ import java.util.Optional;
 
 @Repository
 public interface RepositoryTask extends JpaRepository<Task,Long> {
-    Optional<Task> findByName (String title);
+    Optional<Task> findByTitle (String title);
 }
