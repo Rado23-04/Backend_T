@@ -19,7 +19,7 @@ public class ServiceTask {
     }
 
     public Optional<Task> getTask(String title){
-        return repositoryTask.findByName(title);
+        return repositoryTask.findByTitle(title);
     }
 
     public String DeleteTask (Long id){
