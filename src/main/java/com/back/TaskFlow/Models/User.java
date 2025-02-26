@@ -2,6 +2,7 @@ package com.back.TaskFlow.Models;
 
 
 import com.back.TaskFlow.enumm.Role;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 

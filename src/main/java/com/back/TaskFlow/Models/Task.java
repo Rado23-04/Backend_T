@@ -2,6 +2,8 @@ package com.back.TaskFlow.Models;
 
 import com.back.TaskFlow.enumm.Priority;
 import com.back.TaskFlow.enumm.Status;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
