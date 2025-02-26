@@ -43,6 +43,7 @@ public class ConfigSecurity {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/auth/save").permitAll()
                         .requestMatchers("/auth/login").permitAll()
+                        .requestMatchers("/task/all_tasks").permitAll()
                         .requestMatchers("/admin/**").hasRole("ADMIN")
                         .requestMatchers("/user/**").hasRole("USER")
                         .requestMatchers("/public/**").permitAll()
